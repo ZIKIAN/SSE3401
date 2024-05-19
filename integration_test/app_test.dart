@@ -17,12 +17,22 @@ void main() {
         await tester.pumpAndSettle();
 
         await Future.delayed(const Duration(seconds: 2));
-        await tester.tap(find.byIcon(Icons.factory));
         await tester.pumpAndSettle();
+
+        final factoryIconFinder = find.byIcon(Icons.factory);
+        expect(factoryIconFinder, findsWidgets); // Ensure the icon is found
+        await tester.tap(factoryIconFinder.first);
+        await tester.pumpAndSettle();
+
         await Future.delayed(const Duration(seconds: 2));
-        await tester.tap(find.byIcon(Icons.factory));
         await tester.pumpAndSettle();
-        await tester.tap(find.byIcon(Icons.person));
+
+        await tester.tap(factoryIconFinder.first);
+        await tester.pumpAndSettle();
+
+        final personIconFinder = find.byIcon(Icons.person);
+        expect(personIconFinder, findsOneWidget); // Ensure the icon is found
+        await tester.tap(personIconFinder);
         await tester.pumpAndSettle();
 
         expect(find.byType(Activation), findsOneWidget);
