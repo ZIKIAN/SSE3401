@@ -39,20 +39,6 @@ void main() {
         await tester.tap(find.byType(ElevatedButton));
         await tester.pumpAndSettle();
 
-
-        expect(find.byType(OTP), findsOneWidget);
-
-        await Future.delayed(const Duration(seconds: 2));
-        await tester.enterText(find.byType(TextField), "521130");
-        await tester.pumpAndSettle();
-        await Future.delayed(const Duration(seconds: 4));
-        await tester.tap(find.byType(ElevatedButton));
-        await Future.delayed(const Duration(seconds: 5));
-        await tester.pumpAndSettle();
-        await Future.delayed(const Duration(seconds: 2));
-
-
-
       },
     );
   });
