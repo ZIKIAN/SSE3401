@@ -17,10 +17,10 @@ void main() {
         await tester.pumpAndSettle();
 
         await Future.delayed(const Duration(seconds: 2));
-        await tester.tap(find.byIcon(Icons.factory).at(0));
+        await tester.tap(find.byIcon(Icons.factory));
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 2));
-        await tester.tap(find.byIcon(Icons.factory).at(1));
+        await tester.tap(find.byIcon(Icons.factory));
         await tester.pumpAndSettle();
         await tester.tap(find.byIcon(Icons.person));
         await tester.pumpAndSettle();
