@@ -17,22 +17,16 @@ void main() {
         await tester.pumpAndSettle();
 
         await Future.delayed(const Duration(seconds: 2));
+        await tester.tap(find.byIcon(Icons.factory).at(0));
         await tester.pumpAndSettle();
-
-        final factoryIconFinder = find.byIcon(Icons.factory);
-        expect(factoryIconFinder, findsWidgets);
-        await tester.tap(factoryIconFinder.first);
-        await tester.pumpAndSettle();
-
         await Future.delayed(const Duration(seconds: 2));
+        await tester.tap(find.byIcon(Icons.factory).at(1));
         await tester.pumpAndSettle();
-
-        await tester.tap(factoryIconFinder.first);
+        await Future.delayed(const Duration(seconds: 6));
+        await tester.tap(find.byIcon(Icons.factory).at(2));
+        await Future.delayed(const Duration(seconds: 3));
         await tester.pumpAndSettle();
-
-        final personIconFinder = find.byIcon(Icons.person);
-        expect(personIconFinder, findsOneWidget);
-        await tester.tap(personIconFinder);
+        await tester.tap(find.byIcon(Icons.person));
         await tester.pumpAndSettle();
 
         expect(find.byType(Activation), findsOneWidget);
@@ -41,9 +35,23 @@ void main() {
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 3));
         await tester.tap(find.byType(Checkbox));
+        await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 2));
         await tester.tap(find.byType(ElevatedButton));
         await tester.pumpAndSettle();
+
+
+        expect(find.byType(OTP), findsOneWidget);
+
+        await Future.delayed(const Duration(seconds: 2));
+        await tester.enterText(find.byType(TextField), "521130");
+        await tester.pumpAndSettle();
+        await Future.delayed(const Duration(seconds: 4));
+        await tester.tap(find.byType(ElevatedButton));
+        await Future.delayed(const Duration(seconds: 5));
+        await tester.pumpAndSettle();
+
+
 
       },
     );
