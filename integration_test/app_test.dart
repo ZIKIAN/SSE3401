@@ -22,10 +22,6 @@ void main() {
         await Future.delayed(const Duration(seconds: 2));
         await tester.tap(find.byIcon(Icons.factory).at(1));
         await tester.pumpAndSettle();
-        await Future.delayed(const Duration(seconds: 6));
-        await tester.tap(find.byIcon(Icons.factory).at(2));
-        await Future.delayed(const Duration(seconds: 3));
-        await tester.pumpAndSettle();
         await tester.tap(find.byIcon(Icons.person));
         await tester.pumpAndSettle();
 
