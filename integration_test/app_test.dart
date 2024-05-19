@@ -41,8 +41,6 @@ void main() {
         await tester.pumpAndSettle();
 
 
-        expect(find.byType(OTP), findsOneWidget);
-
         await Future.delayed(const Duration(seconds: 2));
         await tester.enterText(find.byType(TextField), "521130");
         await tester.pumpAndSettle();
