@@ -37,7 +37,7 @@ void main() {
         await tester.tap(find.byType(Checkbox));
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 2));
-        await tester.tap(find.byType(ElevatedButton));
+        await tester.tap(find.byKey(const Key('jump')));
         await tester.pumpAndSettle();
 
 

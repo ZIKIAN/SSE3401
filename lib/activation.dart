@@ -155,6 +155,7 @@ class _MyAppExtState extends State<Activation> {
                             width: 200,
                             height: 50,
                             child: ElevatedButton(
+                              key: Key('jump'),
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
