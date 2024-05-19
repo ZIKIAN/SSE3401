@@ -34,15 +34,19 @@ void main() {
         await tester.enterText(find.byType(TextField), "537737");
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 3));
+        await tester.testTextInput.receiveAction(TextInputAction.done);
+        await tester.pumpAndSettle();
         await tester.tap(find.byType(Checkbox));
         await tester.pumpAndSettle();
-        await Future.delayed(const Duration(seconds: 2));
+        await Future.delayed(const Duration(seconds: 5));
         await tester.tap(find.byKey(const Key('jump')));
         await tester.pumpAndSettle();
 
 
         await Future.delayed(const Duration(seconds: 2));
         await tester.enterText(find.byType(TextField), "521130");
+        await tester.pumpAndSettle();
+        await tester.testTextInput.receiveAction(TextInputAction.done);
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 4));
         await tester.tap(find.byType(ElevatedButton));

@@ -57,153 +57,120 @@ class Factory1 extends State<List1> {
             width: double.infinity,
             height: double.infinity,
             color: Colors.grey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 350,
-                  height: 550,
-                  child: Card(
-                    color: Colors.blueGrey.shade100,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: SizedBox(
-                            width: 300,
-                            height: 120,
-                            child: Card(
-                              color: Colors.white,
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(10,15,0,0),
-                                child: Text(
-                                  '  Ben \n* +60109219938',
-                                  style: TextStyle(
-                                    fontSize: 20,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 350,
+                    height: 550,
+                    child: Card(
+                      color: Colors.blueGrey.shade100,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: SizedBox(
+                              width: 300,
+                              height: 120,
+                              child: Card(
+                                color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(10,15,0,0),
+                                  child: Text(
+                                    '  Ben \n* +60109219938',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: SizedBox(
-                            width: 300,
-                            height: 120,
-                            child: Card(
-                              color: Colors.white,
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(10,10,0,0),
-                                child: Text(
-                                  '  Testing 1 \n* +601234567891',
-                                  style: TextStyle(
-                                    fontSize: 20,
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: SizedBox(
+                              width: 300,
+                              height: 120,
+                              child: Card(
+                                color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(10,10,0,0),
+                                  child: Text(
+                                    '  Testing 1 \n* +601234567891',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: SizedBox(
-                            width: 300,
-                            height: 120,
-                            child: Card(
-                              color: Colors.white,
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(10,10,0,0),
-                                child: Text(
-                                  '  Hello \n* +60123456789',
-                                  style: TextStyle(
-                                    fontSize: 20,
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: SizedBox(
+                              width: 300,
+                              height: 120,
+                              child: Card(
+                                color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(10,10,0,0),
+                                  child: Text(
+                                    '  Hello \n* +60123456789',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: GestureDetector(
-                            onTap: (){
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (BuildContext context) => Invitation(),
-                                ),
-                              );
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0,40,15,0),
-                              child: SizedBox(
-                                width: 75,
-                                height: 75,
-                                child: Card(
-                                  color: Colors.blue.shade200,
-                                  child: Icon(Icons.add),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => Invitation(),
+                                  ),
+                                );
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(0,40,15,0),
+                                child: SizedBox(
+                                  width: 75,
+                                  height: 75,
+                                  child: Card(
+                                    color: Colors.blue.shade200,
+                                    child: Icon(Icons.add),
+                                  ),
                                 ),
                               ),
+              
                             ),
-
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: (){
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => List1(),
-                              ),
-                            );
-                          },
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(30,0,20,0),
-                            child: SizedBox(
-                              width: 170,
-                              height: 130,
-                              child: Card(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.factory,
-                                      size: 75,
-                                    ),
-                                    Text(
-                                      'Factory 1',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
+                  Container(
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          GestureDetector(
                             onTap: (){
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (BuildContext context) => Fac2(),
+                                  builder: (BuildContext context) => List1(),
                                 ),
                               );
                             },
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(0,0,20,0),
+                              padding: EdgeInsets.fromLTRB(30,0,20,0),
                               child: SizedBox(
                                 width: 170,
                                 height: 130,
@@ -216,7 +183,7 @@ class Factory1 extends State<List1> {
                                         size: 75,
                                       ),
                                       Text(
-                                        'Factory 2',
+                                        'Factory 1',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontSize: 20,
@@ -226,43 +193,78 @@ class Factory1 extends State<List1> {
                                   ),
                                 ),
                               ),
-                            )
-                        ),
-                        GestureDetector(
-                          onTap: (){
-
-                          },
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(0,0,30,0),
-                            child: SizedBox(
-                              width: 170,
-                              height: 130,
-                              child: Card(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.factory,
-                                      size: 75,
+                            ),
+                          ),
+                          GestureDetector(
+                              onTap: (){
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => Fac2(),
+                                  ),
+                                );
+                              },
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0,0,20,0),
+                                child: SizedBox(
+                                  width: 170,
+                                  height: 130,
+                                  child: Card(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.factory,
+                                          size: 75,
+                                        ),
+                                        Text(
+                                          'Factory 2',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                          ),
+                                        )
+                                      ],
                                     ),
-                                    Text(
-                                      'Factory 3',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 20,
+                                  ),
+                                ),
+                              )
+                          ),
+                          GestureDetector(
+                            onTap: (){
+              
+                            },
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(0,0,30,0),
+                              child: SizedBox(
+                                width: 170,
+                                height: 130,
+                                child: Card(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.factory,
+                                        size: 75,
                                       ),
-                                    )
-                                  ],
+                                      Text(
+                                        'Factory 3',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           )
       ),
