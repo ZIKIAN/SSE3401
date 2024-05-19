@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lab5/factory1.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:lab5/factory2.dart' as app;
+import 'package:lab5/main.dart' as app;
 import 'package:lab5/activation.dart';
 import 'package:lab5/invitation.dart';
 

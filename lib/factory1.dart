@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab5/factory2.dart';
+import 'package:lab5/main.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'factorysetting1.dart';
 import 'activation.dart';

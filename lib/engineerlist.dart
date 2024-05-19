@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab5/factory2.dart';
+import 'package:lab5/main.dart';
 import 'factorysetting1.dart';
 import 'activation.dart';
 import 'invitation.dart';
