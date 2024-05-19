@@ -35,7 +35,6 @@ void main() {
         await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 3));
         await tester.tap(find.byType(Checkbox));
-        await tester.pumpAndSettle();
         await Future.delayed(const Duration(seconds: 2));
         await tester.tap(find.byType(ElevatedButton));
         await tester.pumpAndSettle();
@@ -50,6 +49,7 @@ void main() {
         await tester.tap(find.byType(ElevatedButton));
         await Future.delayed(const Duration(seconds: 5));
         await tester.pumpAndSettle();
+        await Future.delayed(const Duration(seconds: 2));
 
 
 
