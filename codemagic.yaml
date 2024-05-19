@@ -13,35 +13,36 @@ workflows:
         FIREBASE_PROJECT: "factory-57f67"
     scripts:
       - name: Get Flutter packages
-        script:
+        script: |
           flutter packages pub get
       - name: Build APK with Flutter
-        script:
+        script: |
           flutter build apk --debug
-      - name: Crete debug and test APK
-        script:
+      - name: Create debug and test APK
+        script: |
           set -ex
           cd android
           ./gradlew app:assembleAndroidTest
-          ./gradlew app:assembleDebug -Target="$CM_BUILD_DIR/integration_test/app_test.dart"
+          ./gradlew app:assembleDebug -Ptarget="$CM_BUILD_DIR/integration_test/app_test.dart"
       - name: Run Firebase Test Lab Tests
-        script:
+        script: |
           set -ex
           echo $GCLOUD_KEY_FILE | base64 --decode > ./gcloud_key_file.json
           gcloud auth activate-service-account --key-file=gcloud_key_file.json
           gcloud --quiet config set project $FIREBASE_PROJECT
-        
+          
           gcloud firebase test android run \
-            --type instrumentation \
-            --app build/app/outputs/apk/debug/app-debug.apk \
-            --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
-            --timeout 3m
+           --type instrumentation \
+           --app build/app/outputs/apk/debug/app-debug.apk \
+           --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
+           --timeout 5m
 
     artifacts:
-      - build/**/outputs/**/*.apk
-      - build/**/outputs/**/*.aab
-      - build/**/outputs/**/mapping.txt
+      - build//outputs//*.apk
+      - build//outputs//*.aab
+      - build//outputs//mapping.txt
       - flutter_drive.log
+
 
     publishing:
       email:
