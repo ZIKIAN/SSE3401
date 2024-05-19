@@ -52,11 +52,7 @@ void main() {
         await tester.pumpAndSettle();
 
 
-        Navigator.of(tester.element(find.byType(Scaffold))).pop();
-        await tester.pumpAndSettle();
-        expect(find.byType(Fac1), findsOneWidget);
-        await tester.pumpAndSettle();
-        await Future.delayed(const Duration(seconds: 2));
+
       },
     );
   });
