@@ -20,7 +20,7 @@ void main() {
         await tester.pumpAndSettle();
 
         final factoryIconFinder = find.byIcon(Icons.factory);
-        expect(factoryIconFinder, findsWidgets); // Ensure the icon is found
+        expect(factoryIconFinder, findsWidgets);
         await tester.tap(factoryIconFinder.first);
         await tester.pumpAndSettle();
 
@@ -31,7 +31,7 @@ void main() {
         await tester.pumpAndSettle();
 
         final personIconFinder = find.byIcon(Icons.person);
-        expect(personIconFinder, findsOneWidget); // Ensure the icon is found
+        expect(personIconFinder, findsOneWidget);
         await tester.tap(personIconFinder);
         await tester.pumpAndSettle();
 
