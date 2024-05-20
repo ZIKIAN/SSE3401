@@ -32,11 +32,10 @@ workflows:
           gcloud --quiet config set project $FIREBASE_PROJECT
           
           gcloud firebase test android run \
-            --type instrumentation \
-            --app build/app/outputs/apk/debug/app-debug.apk \
-            --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
-            --results-bucket=your-gcs-bucket \
-            --timeout 5m
+           --type instrumentation \
+           --app build/app/outputs/apk/debug/app-debug.apk \
+           --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
+           --timeout 5m
 
     artifacts:
       - build//outputs//*.apk
