@@ -10,7 +10,7 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
-        FIREBASE_PROJECT: "factory-57f67"
+        FIREBASE_PROJECT: "factory2-6d977"
     scripts:
       - name: Get Flutter packages
         script: |
@@ -35,7 +35,6 @@ workflows:
             --type instrumentation \
             --app build/app/outputs/apk/debug/app-debug.apk \
             --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
-            --results-bucket=your-gcs-bucket \
             --timeout 5m
 
     artifacts:
